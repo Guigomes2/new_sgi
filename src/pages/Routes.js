@@ -2,18 +2,17 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
 } from "react-router-dom";
 
 import LoginPage from "./pages/LoginPage";
-import HomePage from "./pages/HomePage";
+import Cadastro from "./pages/Cadastro";
 
 const Routes = () => {
   return (
     <Router>
       <Routes>
-        <Route exact path="/login" element={<LoginPage />} />
-        <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/" element={<LoginPage />} />
+        <Route exact path="cadastro" element={<Cadastro />} />
       </Routes>
     </Router>
   );
