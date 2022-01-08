@@ -1,0 +1,33 @@
+#login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vh;
+  padding: 0 2rem;
+}
+
+.cabecalho {
+  display: flex;
+  background-color: #f7b600;
+  justify-content: center;
+  min-width: 100vh;
+  border-radius: 5px;
+}
+
+#buttonLogin {
+  background-color: #3b5998;
+  color: white;
+  cursor: pointer;
+}
+
+#login .form {
+  background-color: #f1f1f1;
+  width: 100%;
+  max-width: 480px;
+  padding: 0.5rem;
+}
+
+#login .fild label {
+  display: block;
+}
