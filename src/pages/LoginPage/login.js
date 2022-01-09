@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AuthContext } from "../contexts/autenticacao";
 import "./style.css";
 
 const LoginPage = () => {
+  const { autenticado, login } = useContext(AuthContext);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,7 +17,7 @@ const LoginPage = () => {
   return (
     <div id="login">
       <div className="cabecalho">
-        <h1>SGI - Login</h1>
+        <h1>Sistema de Gestão Integrada - Login</h1>
       </div>
       <form className="form" onSubmit={handleSubmit}>
         <div className="div">
@@ -24,6 +27,7 @@ const LoginPage = () => {
             id="email"
             name="email"
             placeholder="Enter your email"
+            required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -33,6 +37,7 @@ const LoginPage = () => {
             id="password"
             name="password"
             placeholder="Enter your password"
+            required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
